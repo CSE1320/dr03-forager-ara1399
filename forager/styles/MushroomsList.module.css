@@ -1,0 +1,76 @@
+.mushroomList {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .mushroomList h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #343472;
+  }
+  
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .polaroidCard {
+    text-align: center;
+  }
+  
+  .polaroid {
+    background: #ffffff;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 150px;   
+    height: 180px;  
+    position: relative;
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #73D89F; 
+    color: #fff;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 10 10 10 10;
+  }
+  .eighty {
+    background: #FF6666;
+  }
+  .seventy {
+    background: #FF7E7E;
+  }
+  .sixty {
+    background: #A5A5A5;
+  }
+  
+  .alertIcon {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    margin-left: 20px;
+  }
+  
+  .title {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #343472;
+  }
+  
