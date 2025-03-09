@@ -1,0 +1,17 @@
+.pillList {
+    margin: 16px 0;
+}
+
+.pillList h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #343472;
+}
+
+.pillContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: start;
+    /* or center, depending on your layout */
+}

@@ -1,15 +1,14 @@
-import Link from 'next/link';
-import NavBar from '../../components/NavBar';
 import MushroomList from '@/components/MushroomsList';
+import NavBar from '@/components/NavBar';
+import '../../styles/mushroom.css';
 
 export default function MushroomPage() {
   return (
-    <div className="page">
-      <h1>Mushroom Page</h1>
-      <Link href="/comparison">
-        <button>Go to Mushroom Comparison Page</button>
-      </Link>
-      <MushroomList />
+    <div>
+      <h1>Mushroom Collection</h1>
+      <h2>Similar Matches</h2>
+      {/* For similar matches, exclude Death Cap and show percentages */}
+      <MushroomList showPercentage={true} excludeDeathCap={true} />
       <NavBar />
     </div>
   );

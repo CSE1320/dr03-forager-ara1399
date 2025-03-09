@@ -1,59 +1,44 @@
-import NavBar from '../../components/NavBar';
+'use client';
+
+import { useState } from 'react';
+import MushroomList from '@/components/MushroomsList';
+import NavBar from '@/components/NavBar';
 import SearchBar from '@/components/SearchBar';
+import FilterSettings from '@/components/FilterSettings';
 import '../../styles/dashboard.css';
+import PillList from '@/components/PillList';
+import { filterData } from '@/data/development';
 
 export default function DashboardPage() {
+  const { myCollection } = filterData;
+  const [showFilter, setShowFilter] = useState(false);
+
+  const handleFilterClick = () => {
+    setShowFilter(true);
+  };
+
+  const handleCloseFilter = () => {
+    setShowFilter(false);
+  };
   return (
     <div className="page">
       <div className="header">
         <h1>Hi, Chantelle!</h1>
       </div>
 
-      <SearchBar />
+      <SearchBar onFilterClick={handleFilterClick} />
+
       <div className="collectionHeader">
         <h2>My Collection</h2>
         <div className="tabs">
-          <button>Texas</button>
-          <button>Favorites</button>
+          <PillList items={myCollection} />
         </div>
       </div>
 
-      <ul className="list">
-        <li className="polaroidCard">
-          <div className="polaroid">
-            <img src="/assets/DeathCap.png" alt="Death Cap" />
-            <img className="alert" src="/assets/Alert.png" alt="Alert" />
-          </div>
-          <div className="title">Death Cap</div>
-        </li>
-        <li className="polaroidCard">
-          <div className="polaroid">
-            <img src="/assets/PaddyStraw.png" alt="Paddy Straw" />
-          </div>
-          <div className="title">Paddy Straw</div>
-        </li>
-        <li className="polaroidCard">
-          <div className="polaroid">
-            <img src="/assets/DestroyingAngel.png" alt="Destroying Angel" />
-            <img className="alert" src="/assets/Alert.png" alt="Alert" />
-          </div>
-          <div className="title">Destroying Angel</div>
-        </li>
-        <li className="polaroidCard">
-          <div className="polaroid">
-            <img src="/assets/FalseDeathCap.png" alt="False Death Cap" />
-            <img className="alert" src="/assets/Alert.png" alt="Alert" />
-          </div>
-          <div className="title">False Death Cap</div>
-        </li>
-        <li className="polaroidCard">
-          <div className="polaroid">
-            <img src="/assets/Puffball.png" alt="Puffball" />
-          </div>
-          <div className="title">Puffball</div>
-        </li>
-      </ul>
-
+      <MushroomList showPercentage={false} excludeDeathCap={false} small={true} />
+      {showFilter && (
+        <FilterSettings onClose={handleCloseFilter} />
+      )}
       <NavBar />
     </div>
   );

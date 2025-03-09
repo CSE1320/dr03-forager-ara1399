@@ -1,46 +1,24 @@
 import React from 'react';
+import MushroomCard from './MushroomCard';
 import styles from '../styles/MushroomsList.module.css';
+import { mushrooms } from '../data/development';
 
-export default function MushroomList() {
+export default function MushroomList({ showPercentage = false, excludeDeathCap = false, small = false }) {
+  const filteredMushrooms = excludeDeathCap
+    ? mushrooms.filter((m) => m.title !== 'Death Cap')
+    : mushrooms;
+    
   return (
     <div className={styles.mushroomList}>
-      <h2>Similar Matches</h2>
       <ul className={styles.list}>
-        <li className={styles.polaroidCard}>
-          <div className={styles.polaroid}>
-            <img src="/assets/PaddyStraw.png" alt="Paddy Straw" />
-            <div className={styles.badge}>90%</div>
-          </div>
-          <div className={styles.title}>Paddy Straw</div>
-        </li>
-
-        <li className={styles.polaroidCard}>
-          <div className={styles.polaroid}>
-            <img src="/assets/DestroyingAngel.png" alt="Destroying Angel" />
-            <div className={`${styles.badge} ${styles.eighty}`}>80%
-              <img src="/assets/Alert.png" alt="Alert" className={styles.alertIcon} />
-            </div>
-          </div>
-          <div className={styles.title}>Destroying Angel</div>
-        </li>
-
-        <li className={styles.polaroidCard}>
-          <div className={styles.polaroid}>
-            <img src="/assets/FalseDeathCap.png" alt="False Death Cap" />
-            <div className={`${styles.badge} ${styles.seventy}`}>70%
-              <img src="/assets/Alert.png" alt="Alert" className={styles.alertIcon} />
-            </div>
-          </div>
-          <div className={styles.title}>False Death Cap</div>
-        </li>
-
-        <li className={styles.polaroidCard}>
-          <div className={styles.polaroid}>
-            <img src="/assets/Puffball.png" alt="Puffball" />
-            <div className={`${styles.badge} ${styles.sixty}`}>60%</div>
-          </div>
-          <div className={styles.title}>Puffball</div>
-        </li>
+        {filteredMushrooms.map((mushroom) => (
+          <MushroomCard
+            key={mushroom.id}
+            mushroom={mushroom}
+            showPercentage={showPercentage}
+            small={small}
+          />
+        ))}
       </ul>
     </div>
   );

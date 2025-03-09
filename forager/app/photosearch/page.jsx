@@ -1,10 +1,5 @@
-import NavBar from '../../components/NavBar';
+import PhotoSearch from '@/components/PhotoSearch';
 
 export default function PhotoSearchPage() {
-  return (
-    <div className="page">
-      <h1>Photo Search Page</h1>
-      <NavBar />
-    </div>
-  );
+  return <PhotoSearch />;
 }
