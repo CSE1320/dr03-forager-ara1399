@@ -1,30 +1,35 @@
-'use client'; // If using Next.js App Router, this enables onClick handlers
+'use client';
 
 import React from 'react';
 import styles from '../styles/Mushroom.module.css';
+import { singleMushroomData } from '../data/development';
 
 export default function Mushroom() {
+    const { name, scientificName, image, text, facts } = singleMushroomData;
+
     return (
         <div className={styles.container}>
-            {/* Polaroid-style image block */}
             <div className={styles.imageContainer}>
-                <img src="/assets/DeathCap.png" alt="Death Cap" />
+                <img src={image} alt="Death Cap" />
             </div>
 
-            {/* Mushroom name + scientific name */}
             <div className={styles.name}>
-                <span>Death Cap</span>
+                <div className={styles.nameText}>
+                    <span>{name}</span>
+                    <span className={styles.scientificName}>{scientificName}</span>
+                </div>
                 <button className={styles.addButton}>+</button>
             </div>
-            <p className={styles.scientificName}>Amanita phalloides</p>
 
-            {/* Fast Facts box */}
             <div className={styles.factsBox}>
-                <p><strong>Cap Diameter:</strong> 5-15cm</p>
-                <p><strong>Gill Color:</strong> White</p>
-                <p><strong>Stem Color:</strong> White</p>
-                <p><strong>Habitat:</strong> Temperate regions</p>
+                <h3>Fast Facts</h3>
+                <p>Cap Diameter: {facts['Cap Diameter']}</p>
+                <p>Gill Color: {facts['Gill Color']}</p>
+                <p>Stem Color: {facts['Stem Color']}</p>
+                <p>Habitat: {facts['Habitat']}</p>
             </div>
+
+            <p className={styles.additionalText}>{text}</p>
         </div>
     );
 }

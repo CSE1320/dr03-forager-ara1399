@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .imageContainer {
@@ -28,15 +29,15 @@
 }
 
 .addButton {
-    margin-left: auto;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     background-color: #579076;
     color: #fff;
     border: none;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .name {
@@ -50,24 +51,41 @@
     color: #343472;
 }
 
+.nameText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
 .scientificName {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: 14px;
     font-style: italic;
     color: #b3b3b3;
 }
 
 .factsBox {
-    background-color: #7a4e4e;
-    border-radius: 6px;
-    padding: 8px;
-    margin-top: 8px;
-    font-size: 14px;
+    background-color: #8B5E5E;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
     text-align: left;
     color: #fff;
+    line-height: 1.5;
     width: 100%;
 }
 
 .factsBox p {
     margin: 4px 0;
+}
+
+.additionalText {
+    margin-top: 16px;
+    font-size: 16px;
+    text-align: left;
+    color: #343472;
+    line-height: 1.5;
+    width: 100%;
 }

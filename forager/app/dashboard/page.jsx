@@ -6,7 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import FilterSettings from '@/components/FilterSettings';
 import MushroomList from '@/components/MushroomsList';
 import PillList from '@/components/PillList';
-import '../../styles/dashboard.css';
+import '../../styles/dashboard.module.css';
 import { mushrooms } from '@/data/development';
 import Header from '@/components/Header';
 

@@ -1,0 +1,27 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compareLink {
+    position: relative;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #888787;
+    text-decoration: none;
+    float: right;
+}
+
+.compareLink::after {
+    content: ' >';
+    color: #888787;
+    margin-right: 10px;
+}

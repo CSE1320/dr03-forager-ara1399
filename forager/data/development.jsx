@@ -92,7 +92,28 @@ const singleMushroomData = {
         'Stem Color': 'White',
         Habitat: 'Temperate regions',
     },
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic accusamus possimus reiciendis itaque, eum omnis dicta provident laboriosam culpa harum nulla facere voluptates, nemo architecto quae corporis. Impedit, sint!',
 };
+
+
+export const messagesData = {
+    warning: {
+        title: 'WARNING',
+        icon: '/assets/Warning.png',
+        text: 'This is a toxic species, proceed with caution.',
+        color: '#FF5050',
+    },
+    attention: {
+        title: 'ATTENTION!',
+        icon: '/assets/Warning.png',
+        text: `Our system can make mistakes! 
+  Remember to verify important information and use your own judgement 
+  to determine if any mushroom is safe. Be sure to use the “Report Error” 
+  button if you suspect a mistake.`,
+        color: '#FF5050',
+    },
+};
+
 
 
 // Two flavors of exporting:
