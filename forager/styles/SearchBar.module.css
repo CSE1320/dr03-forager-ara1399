@@ -1,8 +1,12 @@
+.searchBarContainer {
+  position: relative;
+}
+
 .searchBar {
-  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .inputContainer {
@@ -10,20 +14,38 @@
   flex: 1;
 }
 
-.inputContainer input {
-  width: 100%;
-  padding: 8px 12px 8px 40px;
-  border-radius: 20px;
-}
-
-.inputContainer svg {
+.searchIcon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: #979797;
-}
-.filterIcon {
-  color: #579076;
+  pointer-events: none;
 }
 
+.inputContainer input {
+  width: 100%;
+  padding: 8px 12px 8px 30px; /* leave room for the search icon */
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  color: #000000;
+}
+
+.clearButton {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.filterIcon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #579076;
+}

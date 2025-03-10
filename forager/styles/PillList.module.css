@@ -12,6 +12,5 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: start;
-    /* or center, depending on your layout */
+    justify-content: flex-start;
 }

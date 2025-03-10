@@ -57,13 +57,46 @@ const filterData = {
     tags: ['Favorites', 'Recent'],
     regions: ['Texas', 'North America', 'Asia', 'Europe', 'Africa'],
     categories: ['Poisonous', 'Medicinal', 'Mythical', 'Good for Broths'],
-    myCollection: ['Texas', 'Favorites'], // For the Dashboard page
 };
 
+const comparisonTableData = {
+    userPhoto: {
+        id: 'userPhoto',
+        title: 'Your Photo',
+        image: '/assets/BG.png',
+        alert: false,
+        percentage: null,
+        badgeClass: '',
+    },
+
+    tableRows: [
+        { label: 'Cap Shape', left: 'Flat', right: 'Flat' },
+        { label: 'Cap Color', left: 'Brown', right: 'Yellow' },
+        { label: 'Cap Texture', left: 'Smooth', right: 'Smooth' },
+        { label: 'Gills Type', left: 'Free', right: 'Free' },
+        { label: 'Gills Color', left: 'White', right: 'White' },
+        { label: 'Stem Shape', left: 'Slender', right: 'Slender' },
+        { label: 'Stem Color', left: 'White', right: 'White' },
+        { label: 'Stem Ring', left: 'Absent', right: 'Absent' },
+        { label: 'Habitat', left: '?', right: 'Near oak/beech' },
+    ],
+};
+
+const singleMushroomData = {
+    name: 'Death Cap',
+    scientificName: 'Amanita phalloides',
+    image: '/assets/DeathCap.png',
+    facts: {
+        'Cap Diameter': '5-15cm',
+        'Gill Color': 'White',
+        'Stem Color': 'White',
+        Habitat: 'Temperate regions',
+    },
+};
 
 
 // Two flavors of exporting:
 // export default dummyData; // Requires import dummyData from './data/development.js';
 
 // More than one export.
-export { warningMessage, dummyData, mushrooms, filterData }; // Requires import {warningMessage, dummyData} from './data/development.js';
+export { warningMessage, dummyData, mushrooms, filterData, comparisonTableData, singleMushroomData }; // Requires import {warningMessage, dummyData} from './data/development.js';

@@ -1,9 +1,21 @@
 .pill {
-    background-color: #579076;
+    background-color: #e5e5e5;
+    color: #000;
     padding: 4px 8px;
     border-radius: 12px;
     font-size: 14px;
     cursor: default;
     user-select: none;
     display: inline-block;
-}
+  }
+  
+  .pill:hover {
+    filter: brightness(0.95);
+  }
+  
+  .selected {
+    background-color: #579076; /* greenish */
+    color: #fff;
+    cursor: pointer;
+  }
+  

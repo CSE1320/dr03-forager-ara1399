@@ -7,29 +7,29 @@
   margin: 0;
   padding: 0;
 }
-  
+
 .polaroidCard {
   text-align: center;
 }
-  
+
 .polaroid {
   background: #ffffff;
   border-radius: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  width: 150px;   /* default width */
-  height: 180px;  /* default height */
+  width: 150px;
+  height: 180px;
   position: relative;
 }
 
 .smallPolaroid {
-  width: 100px;   /* smaller width */
-  height: 130px;  /* smaller height */
+  width: 120px;
+  height: 140px;
 }
 
 .polaroid img {
   width: 100%;
-  height: auto;
+  height: 95%;
 }
 
 /* Container for badge and alert icon side by side */
@@ -43,7 +43,7 @@
 }
 
 .badge {
-  background: #73D89F; 
+  background: #73D89F;
   color: #fff;
   font-weight: 600;
   padding: 2px 6px;
@@ -55,9 +55,11 @@
 .eighty {
   background: #FF6666;
 }
+
 .seventy {
   background: #FF7E7E;
 }
+
 .sixty {
   background: #A5A5A5;
 }

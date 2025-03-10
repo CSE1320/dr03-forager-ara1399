@@ -7,8 +7,8 @@ export default function PhotoSearch() {
     <div className={styles.container}>
       {/* Top bar overlay */}
       <div className={styles.topBar}>
-      <Link href="/dashboard">
-          <button className={styles.iconButton}>
+        <Link href="/dashboard">
+          <button className={styles.backButton}>
             <img src="/assets/Back.png" alt="Back" />
           </button>
         </Link>
@@ -26,7 +26,7 @@ export default function PhotoSearch() {
           <img src="/assets/Gallery.png" alt="Gallery" />
         </button>
         <Link href="/dashboard">
-            <button className={styles.cameraButton}></button>
+          <button className={styles.cameraButton}></button>
         </Link>
         <button className={styles.iconButton}>
           <img src="/assets/Retake.png" alt="Retake" />

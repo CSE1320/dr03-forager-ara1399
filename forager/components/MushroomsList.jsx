@@ -3,11 +3,11 @@ import MushroomCard from './MushroomCard';
 import styles from '../styles/MushroomsList.module.css';
 import { mushrooms } from '../data/development';
 
-export default function MushroomList({ showPercentage = false, excludeDeathCap = false, small = false }) {
+export default function MushroomList({ mushrooms = [], showPercentage = false, excludeDeathCap = false, small = false }) {
   const filteredMushrooms = excludeDeathCap
-    ? mushrooms.filter((m) => m.title !== 'Death Cap')
+    ? mushrooms.filter(m => m.title !== 'Death Cap')
     : mushrooms;
-    
+
   return (
     <div className={styles.mushroomList}>
       <ul className={styles.list}>

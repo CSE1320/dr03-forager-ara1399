@@ -1,34 +1,44 @@
-.filterSettings {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80vw; 
-    max-width: 400px; 
-    height: 100vh;
-    background-color: #f7f7f7;
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    padding: 20px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .header h2 {
-    margin: 0;
-    font-size: 18px;
-    color: #343472;
-  }
-  
-  .closeButton {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #000;
-  }
-  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #f7f7f7;
+  width: 90vw;
+  max-width: 400px;
+  height: 80vh;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #343472;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
