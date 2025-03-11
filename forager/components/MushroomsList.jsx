@@ -16,7 +16,7 @@ export default function MushroomList({ mushrooms = [], showPercentage = false, e
             mushroom={mushroom}
             showPercentage={showPercentage}
             small={small}
-            onCardClick={onCardClick}  // Pass down onCardClick
+            onCardClick={onCardClick}
           />
         ))}
       </ul>

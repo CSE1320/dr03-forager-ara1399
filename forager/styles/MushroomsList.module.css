@@ -51,7 +51,6 @@
   font-size: 12px;
 }
 
-/* Badge variations */
 .eighty {
   background: #FF6666;
 }
@@ -91,7 +90,9 @@
   gap: 4px;
 }
 
-.dangerIcon, .warningIcon, .alertIcon {
-  width: auto;  
+.dangerIcon,
+.warningIcon,
+.alertIcon {
+  width: auto;
   height: 1.5em;
 }

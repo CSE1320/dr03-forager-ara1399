@@ -4,6 +4,12 @@ import PillList from './PillList';
 import styles from '../styles/FilterSettings.module.css';
 
 export default function FilterSettings({ onClose, selectedFilters, toggleFilterItem }) {
+  const categories = [
+    { heading: "Tags", items: filterData.tags, category: "tags" },
+    { heading: "Regions", items: filterData.regions, category: "regions" },
+    { heading: "Category", items: filterData.categories, category: "categories" }
+  ];
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -13,30 +19,16 @@ export default function FilterSettings({ onClose, selectedFilters, toggleFilterI
             X
           </button>
         </div>
-
-        <PillList
-          heading="Tags"
-          items={filterData.tags}
-          category="tags"
-          selectedFilters={selectedFilters}
-          toggleFilterItem={toggleFilterItem}
-        />
-
-        <PillList
-          heading="Regions"
-          items={filterData.regions}
-          category="regions"
-          selectedFilters={selectedFilters}
-          toggleFilterItem={toggleFilterItem}
-        />
-
-        <PillList
-          heading="Category"
-          items={filterData.categories}
-          category="categories"
-          selectedFilters={selectedFilters}
-          toggleFilterItem={toggleFilterItem}
-        />
+        {categories.map(({ heading, items, category }) => (
+          <PillList
+            key={category}
+            heading={heading}
+            items={items}
+            category={category}
+            selectedFilters={selectedFilters}
+            toggleFilterItem={toggleFilterItem}
+          />
+        ))}
       </div>
     </div>
   );

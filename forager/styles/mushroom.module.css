@@ -11,10 +11,13 @@
     align-items: center;
 }
 
+.compareLink, .expectedText, .reportButton {
+    font-size: 14px;
+}
+
 .compareLink {
     position: relative;
     margin-right: 10px;
-    font-size: 16px;
     color: #888787;
     text-decoration: none;
     float: right;
@@ -29,7 +32,6 @@
 }
 
 .expectedText {
-    font-size: 14px;
     color: #333;
 }
 
@@ -40,6 +42,5 @@
     border-radius: 15px;
     padding: 6px 12px;
     cursor: pointer;
-    font-size: 14px;
     font-weight: 600;
 }

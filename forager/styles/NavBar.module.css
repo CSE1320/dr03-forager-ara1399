@@ -7,7 +7,7 @@
   right: 0;
   border-radius: 20px 20px 0 0;
   background-color: #579076;
-  padding: 15px 0;
+  padding: 20px 0;
   z-index: 100;
 }
 
@@ -19,7 +19,8 @@
 }
 
 .navItem:hover {
-  background-color: #f0f0f0;
+  color: #B6EEA6;
+  background-color: transparent;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }

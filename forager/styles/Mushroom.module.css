@@ -1,6 +1,6 @@
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 400px;
     background-color: #F2F2F2;
     color: #000;
     margin: 0 auto;
@@ -20,12 +20,6 @@
     padding: 8px;
     position: relative;
     text-align: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
 }
 
 .danger {

@@ -5,11 +5,10 @@ import styles from '../styles/PillList.module.css';
 export default function PillList({
     heading,
     items = [],
-    category,          // e.g. "tags", "regions", or "categories"
-    selectedFilters,   // interactive mode: a Set for the given category
-    toggleFilterItem,  // interactive mode: function to toggle selection
+    category,
+    selectedFilters,
+    toggleFilterItem,
 }) {
-    // If toggleFilterItem is not provided, we assume read-only mode and mark all items as selected.
     const isInteractive = typeof toggleFilterItem === 'function';
 
     return (

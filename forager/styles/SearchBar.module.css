@@ -14,18 +14,21 @@
   flex: 1;
 }
 
-.searchIcon {
+.searchIcon, .clearButton {
   position: absolute;
-  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #979797;
   pointer-events: none;
+}
+
+.searchIcon {
+  left: 12px;
+  color: #979797;
 }
 
 .inputContainer input {
   width: 100%;
-  padding: 8px 12px 8px 30px; /* leave room for the search icon */
+  padding: 8px 12px 8px 30px;
   border: none;
   border-radius: 20px;
   outline: none;
@@ -33,10 +36,7 @@
 }
 
 .clearButton {
-  position: absolute;
   right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
   background: transparent;
   border: none;
   font-size: 14px;

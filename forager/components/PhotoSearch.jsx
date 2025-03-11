@@ -5,7 +5,6 @@ import styles from '../styles/PhotoSearch.module.css';
 export default function PhotoSearch() {
   return (
     <div className={styles.container}>
-      {/* Top bar overlay */}
       <div className={styles.topBar}>
         <Link href="/dashboard">
           <button className={styles.backButton}>
@@ -17,15 +16,15 @@ export default function PhotoSearch() {
         </button>
       </div>
 
-      {/* Focus square in center */}
       <div className={styles.focusSquare}></div>
 
-      {/* Bottom bar overlay */}
       <div className={styles.bottomBar}>
-        <button className={styles.iconButton}>
-          <img src="/assets/Gallery.png" alt="Gallery" />
-        </button>
-        <Link href="/dashboard">
+        <Link href={`/dashboard`}>
+          <button className={styles.iconButton}>
+            <img src="/assets/Gallery.png" alt="Gallery" />
+          </button>
+        </Link>
+        <Link href="/mushroom">
           <button className={styles.cameraButton}></button>
         </Link>
         <button className={styles.iconButton}>

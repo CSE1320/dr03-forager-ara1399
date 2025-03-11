@@ -7,15 +7,14 @@
     cursor: default;
     user-select: none;
     display: inline-block;
-  }
-  
-  .pill:hover {
+}
+
+.pill:hover {
     filter: brightness(0.95);
-  }
-  
-  .selected {
-    background-color: #579076; /* greenish */
+}
+
+.selected {
+    background-color: #579076;
     color: #fff;
     cursor: pointer;
-  }
-  
+}

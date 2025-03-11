@@ -27,11 +27,7 @@ export default function MushroomPage() {
   };
 
   const handleCardClick = (mushroom) => {
-    if (mushroom.title === 'Death Cap') {
-      setPopupType("red");
-    } else {
-      setPopupType("green");
-    }
+    setPopupType(mushroom.title === 'Death Cap' ? "red" : "green");
   };
 
   return (
@@ -45,11 +41,11 @@ export default function MushroomPage() {
 
       {popupType && (
         <div className={styles.overlay}>
-          {popupType === "red" ? (
-            <MessageBox messageKey="attention" onClose={handleClosePopup} dismissible={true} />
-          ) : (
-            <MessageBox messageKey="percentages" onClose={handleClosePopup} dismissible={true} />
-          )}
+          <MessageBox
+            messageKey={popupType === "red" ? "attention" : "percentages"}
+            onClose={handleClosePopup}
+            dismissible={true}
+          />
         </div>
       )}
 

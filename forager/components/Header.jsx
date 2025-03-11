@@ -1,14 +1,12 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/navigation'; // or next/router if you're in pages router
+import { useRouter } from 'next/navigation';
 import styles from '../styles/Header.module.css';
 
 export default function Header({ title }) {
   const router = useRouter();
 
   const handleBackClick = () => {
-    // By default, go back in history. 
-    // If you need a specific route, you can do router.push('/dashboard') etc.
     router.back();
   };
 

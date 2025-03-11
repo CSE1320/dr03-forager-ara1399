@@ -1,11 +1,29 @@
 'use client';
 
+import { useState } from 'react';
 import React from 'react';
 import styles from '../styles/Mushroom.module.css';
 import { singleMushroomData } from '../data/development';
 
 export default function Mushroom() {
     const { name, scientificName, image, text, facts, percentage } = singleMushroomData;
+    const [added, setAdded] = useState(false);
+
+    const handleAddClick = () => {
+        const updateFavorites = (favorites) => {
+            if (!favorites.includes(name)) {
+                favorites.push(name);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            }
+        };
+
+        const stored = localStorage.getItem('favorites');
+        const favorites = stored ? JSON.parse(stored) : [];
+        updateFavorites(favorites);
+
+        setAdded(true);
+        setTimeout(() => setAdded(false), 1500);
+    };
 
     return (
         <div className={styles.container}>
@@ -27,7 +45,12 @@ export default function Mushroom() {
                     <span>{name}</span>
                     <span className={styles.scientificName}>{scientificName}</span>
                 </div>
-                <button className={styles.addButton}>+</button>
+                <button
+                    className={styles.addButton}
+                    onClick={handleAddClick}
+                >
+                    {added ? '✓' : '+'}
+                </button>
             </div>
 
             <div className={styles.factsBox}>
