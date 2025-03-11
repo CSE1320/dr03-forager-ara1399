@@ -1,3 +1,8 @@
+.page {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -11,7 +16,9 @@
     align-items: center;
 }
 
-.compareLink, .expectedText, .reportButton {
+.compareLink,
+.expectedText,
+.reportButton {
     font-size: 14px;
 }
 

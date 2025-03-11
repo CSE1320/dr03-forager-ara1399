@@ -31,7 +31,7 @@ export default function MushroomPage() {
   };
 
   return (
-    <div className={styles.mushroomPage}>
+    <div className={styles.page}>
       <Header title="Match Results" />
       <div className={styles.reportContainer}>
         <span className={styles.expectedText}>Not what you expected?</span>

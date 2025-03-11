@@ -21,6 +21,16 @@ body {
   background: var(--background);
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
+.page {
+  padding-top: 100px;
+}
+.dashboardPage {
+  padding-top: 80px;
+}
+.photosearch {
+  padding-top: 0 !important;
+}
+
 html, body{
   height: 100%;
   width: 100%;
@@ -32,7 +42,7 @@ html, body{
 h2 {
   font-size: 24px;
   font-weight: 600;
-  color: #343472;
+  color: #324053;
   display: flex;
   justify-content: center;
 }

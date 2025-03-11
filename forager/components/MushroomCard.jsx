@@ -3,7 +3,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import styles from '../styles/MushroomsList.module.css';
 
-export default function MushroomCard({ mushroom, showPercentage, small, onCardClick }) {
+export default function MushroomCard({ mushroom, showPercentage, largeTitle = false, small, onCardClick }) {
   const router = useRouter();
   const handleClick = () => {
     if (title === 'Death Cap') {
@@ -43,7 +43,9 @@ export default function MushroomCard({ mushroom, showPercentage, small, onCardCl
 
         </div>
       </div>
-      <div className={styles.title}>{title}</div>
+      <div className={`${styles.title} ${largeTitle ? styles.largeTitle : ''}`}>
+        {title}
+      </div>
     </li>
   );
 }

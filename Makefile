@@ -2,11 +2,12 @@
 ####################### Makefile Template ##############################
 ########################################################################
 # Student settings
-NAME = YOURNAME
-SID = YOURSID
-EMAIL = YOURUTAEMAIL
+NAME = ARHAMRIAZALI
+SID = 1001851399
+EMAIL = ARA1399@MAVS.UTA.EDU
 SEMESTER = SPRING2025
 PROJECT=PROJ03
+LINK = https://youtu.be/yCIrxhS5iz0
  
 
 ####### DO NOT EDIT BELOW THIS LINE!!! #########
