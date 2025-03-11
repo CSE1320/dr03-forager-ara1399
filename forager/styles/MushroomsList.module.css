@@ -9,6 +9,7 @@
 
 .polaroidCard {
   text-align: center;
+  cursor: pointer;
 }
 
 .polaroid {
@@ -26,12 +27,11 @@
   height: 140px;
 }
 
-.polaroid img {
+.polimg {
   width: 100%;
   height: 95%;
 }
 
-/* Container for badge and alert icon side by side */
 .badgeContainer {
   position: absolute;
   top: 10px;
@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  z-index: 1;
 }
 
 .badge {
@@ -63,15 +64,34 @@
   background: #A5A5A5;
 }
 
-/* Alert icon displayed next to the badge */
-.alertIcon {
-  width: 50px;
-  height: 8px;
-}
-
 .title {
   margin-top: 8px;
   font-size: 14px;
   font-weight: 600;
   color: #343472;
+}
+
+.danger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.dangerBubble {
+  background-color: #FF6666;
+  color: #fff;
+  font-weight: 600;
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dangerIcon, .warningIcon, .alertIcon {
+  width: auto;  
+  height: 1.5em;
 }

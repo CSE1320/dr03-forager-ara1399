@@ -14,36 +14,61 @@ export default function MushroomPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [attentionVisible, setAttentionVisible] = useState(false);
-
+  const [popupType, setPopupType] = useState(null);
   useEffect(() => {
     if (searchParams.get('showAttention') === 'true') {
-      setAttentionVisible(true);
+      setPopupType("red");
     }
   }, [searchParams]);
 
-  const handleCloseAttention = () => {
-    setAttentionVisible(false);
-    // Remove ?showAttention=true from the URL
+  const handleClosePopup = () => {
+    setPopupType(null);
     router.replace('/mushroom');
   };
+
+  const handleCardClick = (mushroom) => {
+    if (mushroom.title === 'Death Cap') {
+      setPopupType("red");
+    } else {
+      setPopupType("green");
+    }
+  };
+
   return (
     <div className={styles.mushroomPage}>
       <Header title="Match Results" />
-      {attentionVisible && (
+      <div className={styles.reportContainer}>
+        <span className={styles.expectedText}>Not what you expected?</span>
+        <button className={styles.reportButton}>Report Error {'>'}</button>
+      </div>
+      <MessageBox messageKey="warning" dismissible={false} />
+
+      {popupType && (
         <div className={styles.overlay}>
-          <MessageBox messageKey="attention" onClose={handleCloseAttention} dismissible={true} />
+          {popupType === "red" ? (
+            <MessageBox messageKey="attention" onClose={handleClosePopup} dismissible={true} />
+          ) : (
+            <MessageBox messageKey="percentages" onClose={handleClosePopup} dismissible={true} />
+          )}
         </div>
       )}
-      <MessageBox messageKey="warning" />
+
       <div className={styles.buttonContainer}>
         <Link href="/comparison" className={styles.compareLink}>
-          Compare
+          Compare {'>'}
         </Link>
       </div>
+
       <Mushroom />
+
       <h2 className={styles.similarMatches}>Similar Matches</h2>
-      <MushroomList mushrooms={mushrooms} showPercentage={true} excludeDeathCap={true} />
+      <MushroomList
+        mushrooms={mushrooms}
+        showPercentage={true}
+        excludeDeathCap={true}
+        onCardClick={handleCardClick}
+      />
+
       <NavBar />
     </div>
   );

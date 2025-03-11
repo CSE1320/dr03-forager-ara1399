@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +19,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
 html, body{
   height: 100%;
@@ -26,4 +28,11 @@ html, body{
 .page{
   height: 100%; 
   width: 100%;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #343472;
+  display: flex;
+  justify-content: center;
 }

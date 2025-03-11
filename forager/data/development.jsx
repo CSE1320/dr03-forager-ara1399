@@ -86,6 +86,7 @@ const singleMushroomData = {
     name: 'Death Cap',
     scientificName: 'Amanita phalloides',
     image: '/assets/DeathCap.png',
+    percentage: 97,
     facts: {
         'Cap Diameter': '5-15cm',
         'Gill Color': 'White',
@@ -112,6 +113,13 @@ export const messagesData = {
   button if you suspect a mistake.`,
         color: '#FF5050',
     },
+    percentages: {
+        title: 'Percentages',
+        icon: '/assets/Warning.png',
+        text: `Percentages indicate lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        color: '#6BC591',
+      },
 };
 
 

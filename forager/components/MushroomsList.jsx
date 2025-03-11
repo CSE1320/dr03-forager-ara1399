@@ -1,9 +1,8 @@
 import React from 'react';
 import MushroomCard from './MushroomCard';
 import styles from '../styles/MushroomsList.module.css';
-import { mushrooms } from '../data/development';
 
-export default function MushroomList({ mushrooms = [], showPercentage = false, excludeDeathCap = false, small = false }) {
+export default function MushroomList({ mushrooms = [], showPercentage = false, excludeDeathCap = false, small = false, onCardClick }) {
   const filteredMushrooms = excludeDeathCap
     ? mushrooms.filter(m => m.title !== 'Death Cap')
     : mushrooms;
@@ -17,6 +16,7 @@ export default function MushroomList({ mushrooms = [], showPercentage = false, e
             mushroom={mushroom}
             showPercentage={showPercentage}
             small={small}
+            onCardClick={onCardClick}  // Pass down onCardClick
           />
         ))}
       </ul>

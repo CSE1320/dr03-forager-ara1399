@@ -13,15 +13,33 @@
 
 .compareLink {
     position: relative;
-    margin: 10px 0;
+    margin-right: 10px;
     font-size: 16px;
     color: #888787;
     text-decoration: none;
     float: right;
 }
 
-.compareLink::after {
-    content: ' >';
-    color: #888787;
-    margin-right: 10px;
+.reportContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 8px 16px;
+    gap: 8px;
+}
+
+.expectedText {
+    font-size: 14px;
+    color: #333;
+}
+
+.reportButton {
+    background-color: #FF5050;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
 }
